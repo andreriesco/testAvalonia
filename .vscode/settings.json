@@ -1,0 +1,32 @@
+{
+  "torizon_psswd": "123",
+  "torizon_login": "torizon",
+  "torizon_ip": "192.168.31.185",
+  "host_ip": "192.168.31.201",
+  "torizon_workspace": "${workspaceFolder}",
+  "torizon_debug_port": "",
+  "torizon_debug_ssh_port": "2223",
+  "torizon_debug_port2": "",
+  "torizon_debug_port3": "",
+  "torizon_gpu": "",
+  "torizon_arch": "armv7l",
+  "wait_sync": "1",
+  "torizon_run_as": "torizon",
+  "torizon_app_root": "/home/torizon/app",
+  "tcb.packageName": "testAvalonia",
+  "tcb.version": "3.8.1",
+  "torizon.gpuPrefixRC": true,
+  "dotnet.preferCSharpExtension": true,
+  "omnisharp.useModernNet": true,
+  "dotnet.server.useOmnisharp": true,
+  "docker.environment": {
+    "DOCKER_HOST": "tcp://192.168.31.185:2375"
+  },
+  "docker_registry": "",
+  "docker_login": "aaaaaaa",
+  "docker_password": "secret",
+  "docker_tag": "1",
+  "tcb.clientId": "2",
+  "tcb.clientSecret": "secret",
+  "tcb.fleetName": "2sasa"
+}

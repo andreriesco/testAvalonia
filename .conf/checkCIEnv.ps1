@@ -40,7 +40,7 @@ if (
 ) {
     # validate the environment variables
     foreach ($var in $_envVarsSettings) {
-        if (((Test-Path "Env:$var") -eq $false) -or $_envVarEmptyAllowed.Contains($var)) {
+        if (((Test-Path "Env:$var") -eq $false) -and $_envVarEmptyAllowed.contains($var) -eq $false) {
             Write-Host -ForegroundColor DarkRed `
                 "❌ $var is not set"
             $_missingEnvVarSettings = $true

@@ -29,6 +29,10 @@ function _gotoError {
 $_missingEnvVarSettings = $false
 $_missingEnvVarSecrets  = $false
 
+$_envVarEmptyAllowed = @(
+    "DOCKER_REGISTRY"
+)
+
 # check if we are running in a GitLab CI or GitHub Actions environment
 if (
     ($Env:GITLAB_CI -eq $true) -or
@@ -36,7 +40,7 @@ if (
 ) {
     # validate the environment variables
     foreach ($var in $_envVarsSettings) {
-        if ((Test-Path "Env:$var") -eq $false) {
+        if (((Test-Path "Env:$var") -eq $false) -or $_envVarEmptyAllowed.Contains($var)) {
             Write-Host -ForegroundColor DarkRed `
                 "❌ $var is not set"
             $_missingEnvVarSettings = $true
